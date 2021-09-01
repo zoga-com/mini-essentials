@@ -1,0 +1,41 @@
+apply plugin: "java"
+
+buildscript {
+  ext.bukkit_version = "1.12.2-R0.1-SNAPSHOT"
+}
+
+repositories {
+  mavenCentral()
+    maven {
+    url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+  }
+  maven { url = 'https://oss.sonatype.org/content/repositories/snapshots' }
+  maven { url = 'https://oss.sonatype.org/content/repositories/central' }
+  maven { url 'https://jitpack.io' }
+}
+
+version = "0.1"
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
+
+configurations {
+  shade
+  compile.extendsFrom shade
+}
+
+// Use the shade configuration to include the dependency's class files in your final JAR
+
+dependencies {
+ // compile "org.bukkit:bukkit:$bukkit_version"
+  compileOnly 'org.spigotmc:spigot-api:1.12.2-R0.1-SNAPSHOT' 
+
+  // shade "org.somewebsite:some-dependency:version"
+}
+
+jar {
+  configurations.shade.each { dep ->
+    from(project.zipTree(dep)) {
+      exclude 'META-INF', 'META-INF/**'
+    }
+  }
+}
