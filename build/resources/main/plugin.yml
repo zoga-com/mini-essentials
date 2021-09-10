@@ -1,25 +1,17 @@
-name: ButtonSimulator
+name: MiniEssentials
 author: Zoga_com
 version: 0.1
-description: "жесть))"
+description: "EssentialsX, but my..."
 main: ru.zoga_com.essentials.Main
 softdepend: [Vault]
 
 
 commands: 
-  balance:
-    permission: saintworld.simulator.button.balance
-    permission-message: 'Нет прав (saintworld.simulator.button.balance)'
-    description: 'баланс'
-  sellall:
-    permission: saintworld.simulator.button.sellall
-    permission-message: 'Нет прав (saintworld.simulator.button.sellall)'
-    description: 'продажа'
-  util:
-    permission: saintworld.simulator.button.util
-    permission-message: Нет прав (saintworld.simulator.button.util)'
-    description: 'утил'
-  level:
-    permission: saintworld.simulator.button.level
-    permission-message: Нет прав (saintworld.simulator.button.level)'
-    description: 'уровни'
+  fly:
+    permission: miniess.fly
+    permission-message: 'Нет прав (miniess.fly)'
+    description: 'полет'
+  gm:
+    permission: miniess.gamemode
+    permission-message: 'Нет прав (miniess.gamemode)'
+    description: 'гм'

@@ -11,3 +11,7 @@ commands:
     permission: miniess.fly
     permission-message: 'Нет прав (miniess.fly)'
     description: 'полет'
+  gm:
+    permission: miniess.gamemode
+    permission-message: 'Нет прав (miniess.gamemode)'
+    description: 'гм'

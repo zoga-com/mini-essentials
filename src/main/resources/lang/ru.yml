@@ -3,3 +3,8 @@
 messages:
    fly_on: '§aВы включили режим полета.'
    fly_off: '§aВы выключили режим полета.'
+   gamemode:
+      creative: '§aРежим CREATIVE включен.'
+      survival: '§aРежим SURVIVAL включен.'
+      adventure: '§aРежим ADVENTURE включен.'
+      spectator: '§aРежим SPECTATOR включен.'
