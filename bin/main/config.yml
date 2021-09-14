@@ -1,0 +1,12 @@
+# global config
+
+chat-filter: false
+filter-words:
+   - пиздец
+   - хуй
+   - бля
+   - блять
+   - бл
+   - хуета
+   - хуйня
+   
