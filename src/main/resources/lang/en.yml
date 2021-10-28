@@ -1,0 +1,10 @@
+# Only use § for color formatting
+
+messages:
+   fly_on: '§aYou enabled flight.'
+   fly_off: '§aYou disabled flight.'
+   gamemode:
+      creative: '§aGamemode CREATIVE enabled.'
+      survival: '§aGamemode SURVIVAL enabled.'
+      adventure: '§aGamemode ADVENTURE enabled.'
+      spectator: '§aGamemode SPECTATOR enabled.'
