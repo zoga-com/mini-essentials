@@ -40,6 +40,9 @@ public class Config {
             langDataRu.set("gamemode.adventure", "§aРежим ADVENTURE включен.");
             langDataRu.set("gamemode.spectator", "§aРежим SPECTATOR включен.");
             langDataRu.set("badword", "§cВаше сообщение содержит запрещенное слово!");
+            langDataRu.createSection("ping");
+            langDataRu.set("ping.before", "§aВаш пинг: §e");
+            langDataRu.set("ping.after", "§aмс");
             langEn.createNewFile();
             langDataEn.createSection("messages");
             langDataEn.set("messages.fly_on", "§aYou enabled flight.");
@@ -50,6 +53,9 @@ public class Config {
             langDataEn.set("gamemode.adventure", "§aGamemode ADVENTURE enabled.");
             langDataEn.set("gamemode.spectator", "§aGamemode SPECTATOR enabled.");
             langDataEn.set("badword", "§cYour message contains a forbidden word!");
+            langDataEn.createSection("ping");
+            langDataEn.set("ping.before", "§aYour ping: §e");
+            langDataEn.set("ping.after", "§ams");
             langDataEn.save(langRu);
             langDataEn.save(langEn);
         }
