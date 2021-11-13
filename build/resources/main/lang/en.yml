@@ -8,3 +8,4 @@ messages:
       survival: '§aGamemode SURVIVAL enabled.'
       adventure: '§aGamemode ADVENTURE enabled.'
       spectator: '§aGamemode SPECTATOR enabled.'
+   badword: '§cYour message contains a forbidden word!'

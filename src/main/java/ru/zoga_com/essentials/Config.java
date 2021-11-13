@@ -39,6 +39,7 @@ public class Config {
             langDataRu.set("gamemode.survival", "§aРежим SURVIVAL включен.");
             langDataRu.set("gamemode.adventure", "§aРежим ADVENTURE включен.");
             langDataRu.set("gamemode.spectator", "§aРежим SPECTATOR включен.");
+            langDataRu.set("badword", "§cВаше сообщение содержит запрещенное слово!");
             langEn.createNewFile();
             langDataEn.createSection("messages");
             langDataEn.set("messages.fly_on", "§aYou enabled flight.");
@@ -48,6 +49,7 @@ public class Config {
             langDataEn.set("gamemode.survival", "§aGamemode SURVIVAL enabled.");
             langDataEn.set("gamemode.adventure", "§aGamemode ADVENTURE enabled.");
             langDataEn.set("gamemode.spectator", "§aGamemode SPECTATOR enabled.");
+            langDataEn.set("badword", "§cYour message contains a forbidden word!");
             langDataEn.save(langRu);
             langDataEn.save(langEn);
         }

@@ -8,3 +8,4 @@ messages:
       survival: '§aРежим SURVIVAL включен.'
       adventure: '§aРежим ADVENTURE включен.'
       spectator: '§aРежим SPECTATOR включен.'
+   badword: '§cВаше сообщение содержит запрещенное слово!'
