@@ -27,9 +27,6 @@ public class Config {
         File langEn = new File(langFiles, File.separator + "en.yml");
         FileConfiguration langDataEn = YamlConfiguration.loadConfiguration(langEn);
 
-        /*if(!langFiles.exists()) {
-            langFiles.mkdir();
-        }*/
         if(!langRu.exists()) {
             langRu.getParentFile().mkdirs(); 
             langEn.getParentFile().mkdirs(); 
