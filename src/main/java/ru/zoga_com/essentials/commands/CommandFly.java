@@ -12,7 +12,6 @@ public class CommandFly implements CommandExecutor {
 
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         Player p = (Player) sender;
-        String playerName = p.getName();
 
         File configDir = new File(Bukkit.getServer().getPluginManager().getPlugin("MiniEssentials").getDataFolder(), File.separator);
         File configFile = new File(configDir, File.separator + "config.yml");

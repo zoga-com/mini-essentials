@@ -4,6 +4,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import ru.zoga_com.essentials.commands.CommandFly;
 import ru.zoga_com.essentials.commands.CommandGamemode;
 import ru.zoga_com.essentials.commands.CommandPing;
+import ru.zoga_com.essentials.commands.CommandInventory;
 import ru.zoga_com.essentials.Config;
 
 
@@ -16,7 +17,8 @@ public class Main extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new Filter(), this);
         this.getCommand("fly").setExecutor(new CommandFly());
         this.getCommand("gm").setExecutor(new CommandGamemode());
-        this.getCommand("gm").setExecutor(new CommandPing());
+        this.getCommand("ping").setExecutor(new CommandPing());
+        this.getCommand("inv").setExecutor(new CommandInventory());
         this.saveDefaultConfig();
     }
     public void onDisable() {

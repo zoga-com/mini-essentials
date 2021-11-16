@@ -15,3 +15,11 @@ commands:
     permission: miniess.gamemode
     permission-message: 'Нет прав (miniess.gamemode)'
     description: 'гм'
+  ping:
+    permission: miniess.ping
+    permission-message: 'Нет прав (miniess.ping)'
+    description: 'пинг'
+  inventory:
+    permission: miniess.inventory
+    permission-message: 'Нет прав (miniess.inventory)'
+    description: 'инвентарь'
