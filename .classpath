@@ -16,4 +16,12 @@
 	<classpathentry kind="con" path="org.eclipse.buildship.core.gradleclasspathcontainer"/>
 	<classpathentry kind="output" path="bin/default"/>
 	<classpathentry kind="lib" path="lib/spigot-1.12.2.jar"/>
+	<classpathentry kind="lib" path="lib/spigot-1.13.jar"/>
+	<classpathentry kind="lib" path="lib/spigot-1.13.2.jar"/>
+	<classpathentry kind="lib" path="lib/spigot-1.14.4.jar"/>
+	<classpathentry kind="lib" path="lib/spigot-1.15.2.jar"/>
+	<classpathentry kind="lib" path="lib/spigot-1.16.1.jar"/>
+	<classpathentry kind="lib" path="lib/spigot-1.16.3.jar"/>
+	<classpathentry kind="lib" path="lib/spigot-1.16.5.jar"/>
+	<classpathentry kind="lib" path="lib/spig17.jar"/>
 </classpath>
