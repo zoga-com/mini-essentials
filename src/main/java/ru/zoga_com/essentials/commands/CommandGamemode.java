@@ -25,7 +25,7 @@ public class CommandGamemode implements CommandExecutor {
         File langEnFile = new File(langs, File.separator + "en.yml");
         FileConfiguration langEn = YamlConfiguration.loadConfiguration(langEnFile);
 
-        if(cmd.getName().equalsIgnoreCase("gm") || cmd.getName().equalsIgnoreCase("gamemode") || cmd.getName().equalsIgnoreCase("гм")) {
+        if(cmd.getName().equalsIgnoreCase("gm")) {
           if(config.getString("lang").equalsIgnoreCase("en")) {
                 if(args[0].equalsIgnoreCase("1") || args[0].equalsIgnoreCase("creative") || args[0].equalsIgnoreCase("c")) {
                     p.setGameMode(GameMode.CREATIVE);

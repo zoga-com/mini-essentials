@@ -43,6 +43,7 @@ public class Config {
             langDataRu.createSection("ping");
             langDataRu.set("ping.before", "§aВаш пинг: §e");
             langDataRu.set("ping.after", "§aмс");
+            langDataRu.set("broadcast", "§aОбьявление: ");
             langEn.createNewFile();
             langDataEn.createSection("messages");
             langDataEn.set("messages.fly_on", "§aYou enabled flight.");
@@ -56,6 +57,7 @@ public class Config {
             langDataEn.createSection("ping");
             langDataEn.set("ping.before", "§aYour ping: §e");
             langDataEn.set("ping.after", "§ams");
+            langDataEn.set("broadcast", "§aBroadcast: ");
             langDataEn.save(langRu);
             langDataEn.save(langEn);
         }

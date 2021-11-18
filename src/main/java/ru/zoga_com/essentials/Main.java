@@ -9,6 +9,7 @@ import ru.zoga_com.essentials.commands.CommandFly;
 import ru.zoga_com.essentials.commands.CommandGamemode;
 import ru.zoga_com.essentials.commands.CommandPing;
 import ru.zoga_com.essentials.commands.CommandInventory;
+import ru.zoga_com.essentials.commands.CommandBroadCast;
 import ru.zoga_com.essentials.Config;
 import ru.zoga_com.essentials.Inventory;
 import ru.zoga_com.essentials.commands.nms.*;
@@ -23,6 +24,7 @@ public class Main extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new Filter(), this); //chat-filter
         getServer().getPluginManager().registerEvents(new Inventory(), this); //anti-dupe /inv
         this.getCommand("fly").setExecutor(new CommandFly()); ///fly
+        this.getCommand("bc").setExecutor(new CommandBroadCast()); ///bc
         this.getCommand("gm").setExecutor(new CommandGamemode()); ///gm
         this.getCommand("inv").setExecutor(new CommandInventory()); ///inv
         this.saveDefaultConfig();

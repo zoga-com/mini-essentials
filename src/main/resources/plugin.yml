@@ -11,15 +11,24 @@ commands:
     permission: miniess.fly
     permission-message: 'Нет прав (miniess.fly)'
     description: 'полет'
+    aliases: ['флай', 'flying', 'flight']
   gm:
     permission: miniess.gamemode
     permission-message: 'Нет прав (miniess.gamemode)'
     description: 'гм'
+    aliases: ['gamemode', 'гм', 'gamem', 'gmode']
   ping:
     permission: miniess.ping
     permission-message: 'Нет прав (miniess.ping)'
     description: 'пинг'
+    aliases: ['пинг', 'myping', 'getping', 'sping']
   inventory:
     permission: miniess.inventory
     permission-message: 'Нет прав (miniess.inventory)'
     description: 'инвентарь'
+    aliases: ['inv', 'invsee', 'seeinv']
+  bc:
+    permission: miniess.broadcast
+    permission-message: 'Нет прав (miniess.broadcast)'
+    description: 'обьявление'
+    aliases: ['broadcast', 'bcast', 'broadc', 'sendmsg']
