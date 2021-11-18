@@ -36,7 +36,7 @@ public class CommandInventory implements CommandExecutor {
 
                     ItemStack[] p2Items = p2Inv.getStorageContents();
 
-                    Inventory gui = Bukkit.createInventory(null, 54, "Инвентарь игрока " + args[0]);
+                    Inventory gui = Bukkit.createInventory(null, 54, "Инвентарь игрока " + args[0] + " #inventory_see");
    
                     for(int i = 0; i < p2Items.length; i++) {
                     ItemStack item = new ItemStack(p2Items[i].getType());

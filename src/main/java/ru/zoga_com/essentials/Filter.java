@@ -9,7 +9,6 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import java.io.*;
 import org.bukkit.Bukkit;
 import java.util.*;
-import net.minecraft.server.v1_12_R1.*;
 
 public class Filter implements Listener {
     @EventHandler

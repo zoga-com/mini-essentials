@@ -9,7 +9,6 @@ import org.bukkit.configuration.file.*;
 import org.bukkit.craftbukkit.v1_12_R1.entity.CraftPlayer;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
-import net.minecraft.server.v1_12_R1.*;
 
 public class CommandPing implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {

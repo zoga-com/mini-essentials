@@ -10,6 +10,7 @@ import ru.zoga_com.essentials.commands.CommandGamemode;
 import ru.zoga_com.essentials.commands.CommandPing;
 import ru.zoga_com.essentials.commands.CommandInventory;
 import ru.zoga_com.essentials.Config;
+import ru.zoga_com.essentials.Inventory;
 import ru.zoga_com.essentials.commands.nms.*;
 
 
@@ -19,12 +20,14 @@ public class Main extends JavaPlugin {
     public void onEnable() {
         this.getLogger().info("Enabled.");
         Config.checkLangs();
-        getServer().getPluginManager().registerEvents(new Filter(), this);
-        this.getCommand("fly").setExecutor(new CommandFly());
-        this.getCommand("gm").setExecutor(new CommandGamemode());
-        this.getCommand("inv").setExecutor(new CommandInventory());
+        getServer().getPluginManager().registerEvents(new Filter(), this); //chat-filter
+        getServer().getPluginManager().registerEvents(new Inventory(), this); //anti-dupe /inv
+        this.getCommand("fly").setExecutor(new CommandFly()); ///fly
+        this.getCommand("gm").setExecutor(new CommandGamemode()); ///gm
+        this.getCommand("inv").setExecutor(new CommandInventory()); ///inv
         this.saveDefaultConfig();
          
+        // get NMS
         switch(getMcVer()) {
         case "1.12":
             this.getCommand("ping").setExecutor(new CommandPing());
@@ -116,6 +119,7 @@ public class Main extends JavaPlugin {
         this.getLogger().info("Disabled.");
     }
 
+    //get NMS method
     public static String getMcVer() {
         Matcher matcher = Pattern.compile("(\\(MC: )([\\d\\.]+)(\\))").matcher(Bukkit.getVersion());
         if (matcher.find()) {
