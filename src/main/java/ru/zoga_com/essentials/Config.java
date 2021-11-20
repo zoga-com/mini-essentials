@@ -44,6 +44,11 @@ public class Config {
             langDataRu.set("ping.before", "§aВаш пинг: §e");
             langDataRu.set("ping.after", "§aмс");
             langDataRu.set("broadcast", "§aОбьявление: ");
+            langDataRu.createSection("filter");
+            langDataRu.set("filter.kick-text-before", "§aИгрок ");
+            langDataRu.set("filter.kick-text-after", "§a матерится. §7§oНажмите на сообщение, чтобы кикнуть его.");
+            langDataRu.set("filter.kick-message", "§aНажмите, чтобы кикнуть.");
+            langDataRu.set("filter.kick-reason", "Использование мата запрещено на нашем сервере.");
             langEn.createNewFile();
             langDataEn.createSection("messages");
             langDataEn.set("messages.fly_on", "§aYou enabled flight.");
@@ -58,6 +63,11 @@ public class Config {
             langDataEn.set("ping.before", "§aYour ping: §e");
             langDataEn.set("ping.after", "§ams");
             langDataEn.set("broadcast", "§aBroadcast: ");
+            langDataEn.createSection("filter");
+            langDataEn.set("filter.kick-text-before", "§aPlayer ");
+            langDataEn.set("filter.kick-text-after", "§a using bad words. §7§oClick to message for kick him.");
+            langDataEn.set("filter.kick-message", "§aClick for kick.");
+            langDataEn.set("filter.kick-reason", "The use of bad words is prohibited on our server.");
             langDataEn.save(langRu);
             langDataEn.save(langEn);
         }
