@@ -61,8 +61,6 @@ public class CommandInventory implements CommandExecutor {
                     gui.setItem(53, boots);
         
                     p.openInventory(gui);
-
-                    return true;
                 }
          }
         } else { sender.sendMessage("/inv <nick>"); }
