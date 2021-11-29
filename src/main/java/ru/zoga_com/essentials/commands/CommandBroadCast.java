@@ -27,7 +27,7 @@ public class CommandBroadCast implements CommandExecutor {
 
         if(cmd.getName().equalsIgnoreCase("bc")) {
           String message = "";
-          for(int i = 1; i < args.length; i++) {
+          for(int i = 0; i < args.length; i++) {
               message += " " + args[i];
           }
           if(config.getString("lang").equalsIgnoreCase("en")) {

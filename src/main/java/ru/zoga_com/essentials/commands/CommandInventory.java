@@ -15,7 +15,6 @@ import org.bukkit.Material;
 public class CommandInventory implements CommandExecutor {
 
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        if(args.length > 0) {
         Player p = (Player) sender;
         String playerName = p.getName();
 
@@ -30,7 +29,8 @@ public class CommandInventory implements CommandExecutor {
         FileConfiguration langEn = YamlConfiguration.loadConfiguration(langEnFile);
 
         if(cmd.getName().equalsIgnoreCase("inventory")) {
-                if(args.length > 1) {
+            if(args.length > 0) { sender.sendMessage("/inv <nick>"); } 
+            if(args.length > 1) {
                     Player p2 = Bukkit.getPlayer(args[0]);
 
                     Inventory p2Inv = p2.getInventory();
@@ -63,7 +63,6 @@ public class CommandInventory implements CommandExecutor {
                     p.openInventory(gui);
                 }
          }
-        } else { sender.sendMessage("/inv <nick>"); }
         return true;
 }
 }

@@ -9,7 +9,7 @@ import org.bukkit.Bukkit;
 public class Inventory implements Listener {
     @EventHandler
     public void onChat(InventoryClickEvent e) {
-        if(e.getInventory().getName().equals("#inventory_see")) {
+        if(e.getView().getTitle().equals("#inventory_see")) {
         e.setCancelled(true);
         }
     }
