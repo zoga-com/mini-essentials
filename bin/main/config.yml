@@ -1,0 +1,39 @@
+#language
+<<<<<<< HEAD
+lang: "en"
+=======
+lang: "ru" # ни на что не влияет пока-что (in dev) (en/ru) 
+>>>>>>> f0ef765 (big refactor)
+
+#chat-filter
+chat-filter: false
+
+#words
+filter-words:
+   - пиздец
+   - хуй
+   - бля
+   - блять
+   - бл
+   - хуета
+   - хуйня
+   - нахуй
+   - ебал
+   - съебал
+   - ебаный
+   - ёбаный
+   - хуесос
+   - трахал
+   - трахнуть
+   - трахну
+   - обьебаный
+   - ебучий
+   - выебать
+   - уёбок
+   - fuck
+   - kid
+   - fck
+   - fack
+   - fukc
+   - fuk
+   - fuc

@@ -1,5 +1,5 @@
 #language
-lang: "en"
+lang: "ru" # ни на что не влияет пока-что (in dev) (en/ru) 
 
 #chat-filter
 chat-filter: false
