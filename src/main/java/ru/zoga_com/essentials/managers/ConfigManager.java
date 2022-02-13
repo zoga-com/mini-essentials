@@ -7,11 +7,10 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 public class ConfigManager {
-    File configDir = new File(Bukkit.getServer().getPluginManager().getPlugin("MiniEssentials").getDataFolder(), File.separator);
-    File configFile = new File(configDir, File.separator + "config.yml");
-    FileConfiguration config = YamlConfiguration.loadConfiguration(configFile);
+    private static File configFile = new File(Bukkit.getServer().getPluginManager().getPlugin("MiniEssentials").getDataFolder(), File.separator + "config.yml");
+    private static FileConfiguration config = YamlConfiguration.loadConfiguration(configFile);
 
-    public String getConfigString(String path) {
+    public static String getConfigString(String path) {
         return config.getString(path);
     }
     public FileConfiguration getConfig() {

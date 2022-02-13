@@ -13,7 +13,7 @@ import org.bukkit.GameMode;
 
 public class CommandGamemode implements CommandExecutor {
     String pluginLang = Main.getLang();
-    static LanguageManager languageManager = new LanguageManager();
+    private static LanguageManager languageManager = new LanguageManager();
 
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         Player p = (Player) sender;

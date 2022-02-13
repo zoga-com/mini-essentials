@@ -14,9 +14,9 @@ import ru.zoga_com.essentials.managers.ConfigManager;
 import ru.zoga_com.essentials.managers.LanguageManager;
 
 public class Filter implements Listener {
-    String pluginLang = Main.getLang();
-    static LanguageManager languageManager = new LanguageManager();
-    static ConfigManager configManager = new ConfigManager();
+    private static String pluginLang = Main.getLang();
+    LanguageManager languageManager = new LanguageManager();
+    ConfigManager configManager = new ConfigManager();
     
     @EventHandler
     public void onChat(AsyncPlayerChatEvent e) {

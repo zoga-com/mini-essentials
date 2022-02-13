@@ -12,8 +12,8 @@ import org.bukkit.craftbukkit.v1_12_R1.entity.CraftPlayer;
 import org.bukkit.Bukkit;
 
 public class CommandPing implements CommandExecutor {
-    String pluginLang = Main.getLang();
-    static LanguageManager languageManager = new LanguageManager();
+    private String pluginLang = Main.getLang();
+    private static LanguageManager languageManager = new LanguageManager();
 
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         Player p = (Player) sender;

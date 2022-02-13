@@ -9,8 +9,8 @@ import ru.zoga_com.essentials.managers.LanguageManager;
 import java.io.*;
 
 public class CommandFly implements CommandExecutor {
-    String pluginLang = Main.getLang();
-    static LanguageManager languageManager = new LanguageManager();
+    private String pluginLang = Main.getLang();
+    LanguageManager languageManager = new LanguageManager();
 
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         Player p = (Player) sender;
