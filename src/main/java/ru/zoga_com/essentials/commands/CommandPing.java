@@ -19,7 +19,7 @@ public class CommandPing implements CommandExecutor {
         Player p = (Player) sender;
 
         if(cmd.getName().equalsIgnoreCase("ping")) {
-              p.sendMessage(languageManager.getLangMessage(pluginLang, "ping.before") + ((CraftPlayer) p).getHandle().ping + languageManager.getLangMessage(pluginLang, "ping.after"));
+              p.sendMessage(languageManager.getLangMessage(pluginLang, "messages.ping.before") + ((CraftPlayer) p).getHandle().ping + languageManager.getLangMessage(pluginLang, "messages.ping.after"));
         }
     return true;
     }
