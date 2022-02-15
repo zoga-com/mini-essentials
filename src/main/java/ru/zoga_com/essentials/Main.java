@@ -16,6 +16,7 @@ public class Main extends JavaPlugin {
         this.getCommand("gm").setExecutor(new CommandGamemode());
         this.getCommand("ping").setExecutor(new CommandPing());
         this.getCommand("speed").setExecutor(new CommandSpeed());
+        this.saveResource("lang.yml", true);
         this.saveDefaultConfig();
     }
     public void onDisable() {
