@@ -6,7 +6,7 @@
 
     <groupId>ru.zoga_com.essentials</groupId>
     <artifactId>miniessentials</artifactId>
-    <version>1.0-patch2</version>
+    <version>1.0-patch4</version>
     <packaging>jar</packaging>
 
     <name>MiniEssentials</name>

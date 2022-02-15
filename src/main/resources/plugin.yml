@@ -1,6 +1,6 @@
 name: MiniEssentials
 author: Zoga_com
-version: "1.0-patch2"
+version: "1.0-patch4"
 description: "EssentialsX, but my..."
 main: ru.zoga_com.essentials.Main
 softdepend: [Vault]
@@ -19,3 +19,7 @@ commands:
     permission: miniess.ping
     permission-message: 'Нет прав (miniess.ping)'
     description: 'пинг'
+  speed:
+    permission: miniess.speed
+    permission-message: 'Нет прав (miniess.ping)'
+    description: 'скорость'
