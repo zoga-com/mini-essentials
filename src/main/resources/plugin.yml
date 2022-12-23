@@ -1,0 +1,23 @@
+name: MiniEssentials
+author: Zoga_com
+main: ru.zoga_com.miniessentials.Main
+version: 2.0
+commands:
+  fly:
+    permission: miniessentials.fly
+    permission-message: "§cНет прав."
+    aliases: ["полет", "флай"]
+  gamemode:
+    permission: miniessentials.gamemode
+    permission-message: "§cНет прав."
+    aliases: ["гм", "gm"]
+  ping:
+    permission: miniessentials.ping
+    permission-message: "§cНет прав."
+    aliases: ["пинг", "задержка"]
+  speed:
+    permission: miniessentials.speed
+    permission-message: "§cНет прав."
+    aliases: ["скорость", "changespeed"]
+
+
