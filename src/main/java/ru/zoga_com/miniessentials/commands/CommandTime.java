@@ -38,6 +38,7 @@ public class CommandTime implements CommandExecutor {
                 );
             }
         } catch(Exception e) {
+            e.printStackTrace();
             commandSender.sendMessage(Language.getMessage("messages.errors.general.exceptionThrow").replace("{throwClass}", e.getClass().getCanonicalName()));
         }
         return true;

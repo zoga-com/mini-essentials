@@ -13,6 +13,7 @@ public class CommandPing implements CommandExecutor {
         try {
             commandSender.sendMessage(Language.getMessage("messages.ping").replace("{ping}", String.valueOf(((Player) commandSender).getPing())));
         } catch(Exception e) {
+            e.printStackTrace();
             commandSender.sendMessage(Language.getMessage("messages.errors.general.exceptionThrow").replace("{throwClass}", e.getClass().getCanonicalName()));
         }
         return true;

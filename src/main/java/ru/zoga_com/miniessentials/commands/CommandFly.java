@@ -11,9 +11,10 @@ public class CommandFly implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
         try {
-            ((Player) commandSender).setFlying(((Player) commandSender).isFlying());
-            commandSender.sendMessage((((Player) commandSender).isFlying()) ? Language.getMessage("messages.fly.off") : Language.getMessage("messages.fly.on"));
+            ((Player) commandSender).setAllowFlight(!(((Player) commandSender).getAllowFlight()));
+            commandSender.sendMessage(((Player) commandSender).getAllowFlight() ? Language.getMessage("messages.fly.enabled") : Language.getMessage("messages.fly.disabled"));
         } catch(Exception e) {
+            e.printStackTrace();
             commandSender.sendMessage(Language.getMessage("messages.errors.general.exceptionThrow").replace("{throwClass}", e.getClass().getCanonicalName()));
         }
         return true;

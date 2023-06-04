@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Variables {
-    public static final int CURRENT_VERSION = 1;
+    public static final int CURRENT_VERSION = 2;
     public static Plugin PLUGIN;
     public final static Map<String, GameMode> modes = new HashMap<>() {{
         put("0", GameMode.SURVIVAL);

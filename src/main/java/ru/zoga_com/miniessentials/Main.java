@@ -23,6 +23,7 @@ public class Main extends JavaPlugin {
             Language.checkVersion();
         } catch(Exception e) {
             getLogger().warning("Произошла ошибка при запуске плагина.");
+            e.printStackTrace();
         }
     }
 

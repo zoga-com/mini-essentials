@@ -28,6 +28,7 @@ public class CommandSpeed implements CommandExecutor {
                 commandSender.sendMessage(Language.getMessage("messages.errors.speed.args"));
             }
         } catch(Exception e) {
+            e.printStackTrace();
             commandSender.sendMessage(Language.getMessage("messages.errors.general.exceptionThrow").replace("{throwClass}", e.getClass().getCanonicalName()));
         }
         return true;

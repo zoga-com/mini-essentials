@@ -15,7 +15,7 @@ public class CommandGamemode implements CommandExecutor {
             if (strings.length == 1) {
                 if (Variables.modes.containsKey(strings[0])) {
                     ((Player) commandSender).setGameMode(Variables.modes.get(strings[0]));
-                    commandSender.sendMessage(Variables.modeKeys.get(Variables.modes.get(strings[0])));
+                    commandSender.sendMessage(Language.getMessage(Variables.modeKeys.get(Variables.modes.get(strings[0]))));
                 } else {
                     commandSender.sendMessage(Language.getMessage("messages.errors.gamemode.args"));
                 }
@@ -23,6 +23,7 @@ public class CommandGamemode implements CommandExecutor {
                 commandSender.sendMessage(Language.getMessage("messages.errors.gamemode.args"));
             }
         } catch(Exception e) {
+            e.printStackTrace();
             commandSender.sendMessage(Language.getMessage("messages.errors.general.exceptionThrow").replace("{throwClass}", e.getClass().getCanonicalName()));
         }
         return true;

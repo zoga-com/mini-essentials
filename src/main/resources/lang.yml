@@ -1,9 +1,9 @@
-version: 1 # не меняйте это значение.
+version: 2 # не меняйте это значение.
 
 messages:
   fly:
-    on: '§aВы включили режим полета.'
-    off: '§aВы выключили режим полета.'
+    enabled: '§aВы включили режим полета.'
+    disabled: '§aВы выключили режим полета.'
   gamemode:
     creative: '§aРежим CREATIVE включен.'
     survival: '§aРежим SURVIVAL включен.'
