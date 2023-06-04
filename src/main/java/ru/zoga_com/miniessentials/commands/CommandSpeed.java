@@ -13,7 +13,7 @@ public class CommandSpeed implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, String[] strings) {
         try {
             if (strings.length == 1) {
-                if (Integer.parseInt(strings[0]) <= 10 && Integer.parseInt(strings[0]) >= 0) {
+                if (Integer.parseInt(strings[0]) <= 10 && Integer.parseInt(strings[0]) >= 1) {
                     if (((Player) commandSender).isFlying()) {
                         ((Player) commandSender).setFlySpeed(Variables.speeds.get(strings[0]));
                         commandSender.sendMessage(Language.getMessage("messages.speed.fly") + strings[0]);
