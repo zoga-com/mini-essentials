@@ -1,5 +1,3 @@
 .idea/
 target/
-.classpath
-.settings/
-.project
+miniessentials.iml

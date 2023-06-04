@@ -1,7 +1,7 @@
 name: MiniEssentials
 author: Zoga_com
 main: ru.zoga_com.miniessentials.Main
-version: 2.0
+version: 2.0.1
 commands:
   fly:
     permission: miniessentials.fly
@@ -19,5 +19,13 @@ commands:
     permission: miniessentials.speed
     permission-message: "§cНет прав."
     aliases: ["скорость", "changespeed"]
+  time:
+    permission: miniessentials.time
+    permission-message: "§cНет прав."
+    aliases: ["время", "врем", "тайм", "changetime", "settime", "timeset"]
+  weather:
+    permission: miniessentials.weather
+    permission-message: "§cНет прав."
+    aliases: ["погода", "пог", "wea", "wthr"]
 
 

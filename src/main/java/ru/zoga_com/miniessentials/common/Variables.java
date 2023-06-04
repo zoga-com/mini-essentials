@@ -6,8 +6,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Variables {
+    public static final int CURRENT_VERSION = 1;
     public static Plugin PLUGIN;
-    public static Map<String, GameMode> modes = new HashMap<String, GameMode>() {{
+    public final static Map<String, GameMode> modes = new HashMap<>() {{
         put("0", GameMode.SURVIVAL);
         put("survival", GameMode.SURVIVAL);
         put("1", GameMode.CREATIVE);
@@ -17,13 +18,13 @@ public class Variables {
         put("3", GameMode.SPECTATOR);
         put("spectator", GameMode.SPECTATOR);
     }};
-    public static Map<GameMode, String> modeKeys = new HashMap<GameMode, String>() {{
+    public final static Map<GameMode, String> modeKeys = new HashMap<>() {{
         put(GameMode.SURVIVAL, "messages.gamemode.survival");
         put(GameMode.CREATIVE, "messages.gamemode.creative");
         put(GameMode.ADVENTURE, "messages.gamemode.adventure");
         put(GameMode.SPECTATOR, "messages.gamemode.spectator");
     }};
-    public static Map<String, Float> speeds = new HashMap<String, Float>() {{
+    public final static Map<String, Float> speeds = new HashMap<>() {{
         put("1", 0.1f);
         put("2", 0.2f);
         put("3", 0.3f);
