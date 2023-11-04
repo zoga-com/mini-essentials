@@ -1,11 +1,11 @@
 package ru.zoga_com.miniessentials;
 
+import dev.jorel.commandapi.CommandAPI;
+import dev.jorel.commandapi.CommandAPIBukkitConfig;
 import org.bukkit.plugin.java.JavaPlugin;
-import ru.zoga_com.miniessentials.commands.*;
+import ru.zoga_com.miniessentials.common.CommandManager;
 import ru.zoga_com.miniessentials.common.Variables;
 import ru.zoga_com.miniessentials.config.Language;
-
-import java.util.Objects;
 import java.util.logging.Level;
 
 public class Main extends JavaPlugin {
@@ -16,12 +16,10 @@ public class Main extends JavaPlugin {
 
             this.saveResource("lang.yml", false);
 
-            Objects.requireNonNull(this.getCommand("fly")).setExecutor(new CommandFly());
-            Objects.requireNonNull(this.getCommand("gamemode")).setExecutor(new CommandGamemode());
-            Objects.requireNonNull(this.getCommand("ping")).setExecutor(new CommandPing());
-            Objects.requireNonNull(this.getCommand("speed")).setExecutor(new CommandSpeed());
-            Objects.requireNonNull(this.getCommand("time")).setExecutor(new CommandTime());
-            Objects.requireNonNull(this.getCommand("weather")).setExecutor(new CommandWeather());
+            CommandAPI.onLoad(new CommandAPIBukkitConfig(this).verboseOutput(true));
+            CommandAPI.onEnable();
+
+            CommandManager.registerCommands();
 
             Language.checkVersion();
         } catch(Exception e) {

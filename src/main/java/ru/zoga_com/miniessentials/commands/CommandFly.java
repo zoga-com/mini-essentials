@@ -1,15 +1,18 @@
 package ru.zoga_com.miniessentials.commands;
 
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
+import dev.jorel.commandapi.executors.CommandArguments;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
+import ru.zoga_com.miniessentials.common.generics.Command;
 import ru.zoga_com.miniessentials.config.Language;
 
-public class CommandFly implements CommandExecutor {
+import java.util.ArrayList;
+import java.util.List;
+
+public class CommandFly implements Command {
     @Override
-    public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, String[] strings) {
+    public void executeTasks(@NotNull CommandSender commandSender, CommandArguments args) {
         try {
             ((Player) commandSender).setAllowFlight(!(((Player) commandSender).getAllowFlight()));
             commandSender.sendMessage(
@@ -18,7 +21,23 @@ public class CommandFly implements CommandExecutor {
         } catch (Exception e) {
             commandSender.sendMessage(Language.getMessage("messages.errors.general.exceptionThrow").replace("{throwClass}", e.getClass().getCanonicalName()));
         }
+    }
 
-        return true;
+    @Override
+    public String getCommandName() {
+        return "fly";
+    }
+
+    @Override
+    public List<String> getAliases() {
+        return new ArrayList<>(){{
+            add("полет");
+            add("флай");
+        }};
+    }
+
+    @Override
+    public String getPermission() {
+        return "miniessentials.fly";
     }
 }

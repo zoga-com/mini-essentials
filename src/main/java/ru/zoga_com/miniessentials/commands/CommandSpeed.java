@@ -1,37 +1,65 @@
 package ru.zoga_com.miniessentials.commands;
 
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
+import dev.jorel.commandapi.executors.CommandArguments;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
-import ru.zoga_com.miniessentials.common.Variables;
+import ru.zoga_com.miniessentials.common.generics.Command;
 import ru.zoga_com.miniessentials.config.Language;
 
-public class CommandSpeed implements CommandExecutor {
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+
+public class CommandSpeed implements Command {
     @Override
-    public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, String[] strings) {
+    public void executeTasks(@NotNull CommandSender commandSender, CommandArguments args) {
         try {
-            if (strings.length != 1) {
-                commandSender.sendMessage(Language.getMessage("messages.errors.speed.args"));
-                return true;
-            }
-            if (Integer.parseInt(strings[0]) >= 10 && Integer.parseInt(strings[0]) <= 1) {
-                commandSender.sendMessage(Language.getMessage("messages.errors.speed.too_big"));
-                return true;
-            }
+            final int speedArgument = (int) args.getOrDefault("speed", 1);
 
             if (((Player) commandSender).isFlying()) {
-                ((Player) commandSender).setFlySpeed(Variables.speeds.get(strings[0]));
-                commandSender.sendMessage(Language.getMessage("messages.speed.fly") + strings[0]);
+                ((Player) commandSender).setFlySpeed(((float) speedArgument / 10));
+                System.out.println(((float) speedArgument / 10));
+                commandSender.sendMessage(Language.getMessage("messages.speed.fly") + speedArgument);
             } else {
-                ((Player) commandSender).setWalkSpeed(Variables.speeds.get(strings[0]));
-                commandSender.sendMessage(Language.getMessage("messages.speed.walk") + strings[0]);
+                ((Player) commandSender).setWalkSpeed(((float) speedArgument / 10));
+                commandSender.sendMessage(Language.getMessage("messages.speed.walk") + speedArgument);
             }
         } catch (Exception e) {
             commandSender.sendMessage(Language.getMessage("messages.errors.general.exceptionThrow").replace("{throwClass}", e.getClass().getCanonicalName()));
         }
+    }
 
-        return true;
+    @Override
+    public String getCommandName() {
+        return "speed";
+    }
+
+    @Override
+    public HashMap<String, String> getArgumentMap() {
+        return new HashMap<>(){{
+            put("speed", "Int");
+        }};
+    }
+
+    @Override
+    public List<String> getAliases() {
+        return new ArrayList<>(){{
+            add("changespeed");
+            add("скорость");
+        }};
+    }
+
+    @Override
+    public String getPermission() {
+        return "miniessentials.speed";
+    }
+
+    @Override
+    public List<String> getSuggestions() {
+        return new ArrayList<>(){{
+            Collections.addAll(this,"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
+        }};
     }
 }
