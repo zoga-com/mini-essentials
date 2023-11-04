@@ -13,13 +13,16 @@ public class Main extends JavaPlugin {
         try {
             this.getLogger().log(Level.INFO, "Плагин включен. Версия: " + this.getDescription().getVersion());
             Variables.PLUGIN = this;
+
             this.saveResource("lang.yml", false);
+
             Objects.requireNonNull(this.getCommand("fly")).setExecutor(new CommandFly());
             Objects.requireNonNull(this.getCommand("gamemode")).setExecutor(new CommandGamemode());
             Objects.requireNonNull(this.getCommand("ping")).setExecutor(new CommandPing());
             Objects.requireNonNull(this.getCommand("speed")).setExecutor(new CommandSpeed());
             Objects.requireNonNull(this.getCommand("time")).setExecutor(new CommandTime());
             Objects.requireNonNull(this.getCommand("weather")).setExecutor(new CommandWeather());
+
             Language.checkVersion();
         } catch(Exception e) {
             getLogger().warning("Произошла ошибка при запуске плагина.");

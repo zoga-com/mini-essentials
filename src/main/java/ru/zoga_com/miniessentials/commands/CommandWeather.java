@@ -17,8 +17,9 @@ public class CommandWeather implements CommandExecutor {
                 commandSender.sendMessage(Language.getMessage("messages.errors.weather.args"));
                 return true;
             }
+
             switch (strings[0]) {
-                case "clear" -> {
+                case "clear" -> { // солнечная погода
                     Objects.requireNonNull(((Player) commandSender).getLocation().getWorld()).setStorm(false);
                     ((Player) commandSender).getLocation().getWorld().setThundering(false);
                     commandSender.sendMessage(Language.getMessage("messages.weather.changed")
@@ -26,7 +27,7 @@ public class CommandWeather implements CommandExecutor {
                             .replace("{weather}", strings[0])
                     );
                 }
-                case "rain" -> {
+                case "rain" -> { // дождливая погода
                     Objects.requireNonNull(((Player) commandSender).getLocation().getWorld()).setStorm(true);
                     Objects.requireNonNull(((Player) commandSender).getLocation().getWorld()).setThundering(false);
                     commandSender.sendMessage(Language.getMessage("messages.weather.changed")
@@ -34,7 +35,7 @@ public class CommandWeather implements CommandExecutor {
                             .replace("{weather}", strings[0])
                     );
                 }
-                case "storm" -> {
+                case "storm" -> { // дождь с грозой
                     Objects.requireNonNull(((Player) commandSender).getLocation().getWorld()).setStorm(true);
                     Objects.requireNonNull(((Player) commandSender).getLocation().getWorld()).setThundering(true);
                     commandSender.sendMessage(Language.getMessage("messages.weather.changed")
@@ -45,9 +46,9 @@ public class CommandWeather implements CommandExecutor {
                 default -> commandSender.sendMessage(Language.getMessage("messages.errors.weather.args"));
             }
         } catch(Exception e) {
-            e.printStackTrace();
             commandSender.sendMessage(Language.getMessage("messages.errors.general.exceptionThrow").replace("{throwClass}", e.getClass().getCanonicalName()));
         }
+
         return true;
     }
 }

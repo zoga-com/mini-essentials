@@ -12,10 +12,10 @@ public class CommandPing implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, String[] strings) {
         try {
             commandSender.sendMessage(Language.getMessage("messages.ping").replace("{ping}", String.valueOf(((Player) commandSender).getPing())));
-        } catch(Exception e) {
-            e.printStackTrace();
+        } catch (Exception e) {
             commandSender.sendMessage(Language.getMessage("messages.errors.general.exceptionThrow").replace("{throwClass}", e.getClass().getCanonicalName()));
         }
+
         return true;
     }
 }

@@ -12,20 +12,21 @@ public class CommandGamemode implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, String[] strings) {
         try {
-            if (strings.length == 1) {
-                if (Variables.modes.containsKey(strings[0])) {
-                    ((Player) commandSender).setGameMode(Variables.modes.get(strings[0]));
-                    commandSender.sendMessage(Language.getMessage(Variables.modeKeys.get(Variables.modes.get(strings[0]))));
-                } else {
-                    commandSender.sendMessage(Language.getMessage("messages.errors.gamemode.args"));
-                }
-            } else {
+            if (strings.length != 1) {
                 commandSender.sendMessage(Language.getMessage("messages.errors.gamemode.args"));
+                return true;
             }
-        } catch(Exception e) {
-            e.printStackTrace();
+            if (!Variables.modes.containsKey(strings[0])) {
+                commandSender.sendMessage(Language.getMessage("messages.errors.gamemode.args"));
+                return true;
+            }
+
+            ((Player) commandSender).setGameMode(Variables.modes.get(strings[0]));
+            commandSender.sendMessage(Language.getMessage(Variables.modeKeys.get(Variables.modes.get(strings[0]))));
+        } catch (Exception e) {
             commandSender.sendMessage(Language.getMessage("messages.errors.general.exceptionThrow").replace("{throwClass}", e.getClass().getCanonicalName()));
         }
+
         return true;
     }
 }

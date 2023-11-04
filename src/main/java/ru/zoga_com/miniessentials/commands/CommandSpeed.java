@@ -12,25 +12,26 @@ public class CommandSpeed implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, String[] strings) {
         try {
-            if (strings.length == 1) {
-                if (Integer.parseInt(strings[0]) <= 10 && Integer.parseInt(strings[0]) >= 1) {
-                    if (((Player) commandSender).isFlying()) {
-                        ((Player) commandSender).setFlySpeed(Variables.speeds.get(strings[0]));
-                        commandSender.sendMessage(Language.getMessage("messages.speed.fly") + strings[0]);
-                    } else {
-                        ((Player) commandSender).setWalkSpeed(Variables.speeds.get(strings[0]));
-                        commandSender.sendMessage(Language.getMessage("messages.speed.walk") + strings[0]);
-                    }
-                } else {
-                    commandSender.sendMessage(Language.getMessage("messages.errors.speed.too_big"));
-                }
-            } else {
+            if (strings.length != 1) {
                 commandSender.sendMessage(Language.getMessage("messages.errors.speed.args"));
+                return true;
             }
-        } catch(Exception e) {
-            e.printStackTrace();
+            if (Integer.parseInt(strings[0]) >= 10 && Integer.parseInt(strings[0]) <= 1) {
+                commandSender.sendMessage(Language.getMessage("messages.errors.speed.too_big"));
+                return true;
+            }
+
+            if (((Player) commandSender).isFlying()) {
+                ((Player) commandSender).setFlySpeed(Variables.speeds.get(strings[0]));
+                commandSender.sendMessage(Language.getMessage("messages.speed.fly") + strings[0]);
+            } else {
+                ((Player) commandSender).setWalkSpeed(Variables.speeds.get(strings[0]));
+                commandSender.sendMessage(Language.getMessage("messages.speed.walk") + strings[0]);
+            }
+        } catch (Exception e) {
             commandSender.sendMessage(Language.getMessage("messages.errors.general.exceptionThrow").replace("{throwClass}", e.getClass().getCanonicalName()));
         }
+
         return true;
     }
 }
